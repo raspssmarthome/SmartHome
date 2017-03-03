@@ -1,0 +1,44 @@
+DROP DATABASE IF EXISTS test;
+
+CREATE DATABASE test;
+
+USE test;
+
+CREATE TABLE `users` 
+(
+	`ID` INT(11) NOT NULL AUTO_INCREMENT,
+	`LOGIN` VARCHAR(255) NOT NULL DEFAULT 'user',
+	`EMAIL` VARCHAR(255) NOT NULL DEFAULT 'mail',
+	`NAME` VARCHAR(255)  DEFAULT 'name',
+	`IS_ADMIN` TINYINT(1)  DEFAULT b'0',
+	`EXP_DATE` DATE NOT NULL DEFAULT "1970-01-01",
+	PRIMARY KEY (`ID`)
+)
+COLLATE='utf8_general_ci';
+
+
+INSERT INTO `users` (`ID`,`LOGIN`,`EMAIL`,`NAME`,`IS_ADMIN`,`EXP_DATE`) 
+VALUES 
+(1,"TestLogin1","test@mail.com","TestName",1,"2016-10-11"),
+(2,"TestLogin3","test@mail.com","TestName",0,"2014-08-15"),
+(3,"TestLogin4","test@mail.com","TestName",0,"2016-10-11"),
+(4,"TestLogin5","test@mail.com","TestName",0,"2013-10-11"),
+(5,"TestLogin6","test@mail.com","TestName",0,"2012-07-13"),
+(6,"TestLogin7","test@mail.com","TestName",0,"2015-10-11"),
+(7,"TestLogin8","test@mail.com","TestName",1,"2015-10-11"),
+(8,"TestLogin9","test@mail.com","TestName",1,"2015-10-11"),
+(9,"TestLogin10","test@mail.com","TestName",0,"2015-10-11"),
+(10,"TestLogin11","test@mail.com","TestName",1,"2015-10-11"),
+(11,"TestLogin12","test@mail.com","TestName",0,"2015-10-11"),
+(12,"TestLogin13","test@mail.com","TestName",1,"2015-10-11"),
+(13,"TestLogin14","test@mail.com","TestName",0,"2015-10-11"),
+(14,"TestLogin15","test@mail.com","TestName",0,"2015-10-11"),
+(15,"TestLogin16","test@mail.com","TestName",0,"2015-10-11"),
+(16,"TestLogin17","test@mail.com","TestName",0,"2015-10-11"),
+(17,"TestLogin18","test@mail.com","TestName",1,"2015-10-11"),
+(18,"TestLogin19","test@mail.com","TestName",0,"2015-10-11"),
+(19,"TestLogin20","test@mail.com","TestName",0,"2015-10-11"),
+(20,"TestLogin21","test@mail.com","TestName",0,"2015-10-11"),
+(21,"TestLogin22","test@mail.com","TestName",1,"2015-10-11"),
+(22,"TestLogin23","test@mail.com","TestName",1,"2015-10-11"),
+(23,"TestLogin24","test@mail.com","TestName",0,"2015-10-11");
